@@ -3,15 +3,15 @@ require './config/conexion.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
+    $nombre = $_POST['nombre'];
     $password = $_POST['password'];
 
-    $stmt = $pdo->prepare("SELECT * FROM usuario WHERE username = ?");
-    $stmt->execute([$username]);
-    $username = $stmt->fetch();
+    $stmt = $pdo->prepare("SELECT * FROM usuario WHERE nombre = ?");
+    $stmt->execute([$nombre]);
+    $nombre = $stmt->fetch();
 
-    if ($username && password_verify($password, $username['password'])) {
-        $_SESSION['user_id'] = $username['id'];
+    if ($nombre && password_verify($password, $nombre['password'])) {
+        $_SESSION['user_id'] = $nombre['id'];
         header("Location: ./pantallas/home_screen.php");
         exit();
     } else {
@@ -35,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>Iniciar sesión - Biblioteca</h1>
         <a href="#" class="oauth-btn"><img src="./assets/img/google.png" alt="Google">Iniciar sesión con Google</a>
         <form method="POST">
-            <label for="username">Usuario</label>
-            <input type="text" name="username" id="username" placeholder="Usuario" required>
+            <label for="nombre">Usuario</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Usuario" required>
 
             <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" placeholder="Contraseña" required>
