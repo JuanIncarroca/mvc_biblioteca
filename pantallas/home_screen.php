@@ -34,7 +34,6 @@ if (isset($_POST['eliminar'])) {
 <html>
 <head>
     <title>Gestión de Libros</title>
-    <link rel="stylesheet" href="../css/style.css">
     <style>
         body { font-family: Arial, sans-serif; }
         form { margin-bottom: 20px; border: 1px solid #ccc; padding: 10px; }
