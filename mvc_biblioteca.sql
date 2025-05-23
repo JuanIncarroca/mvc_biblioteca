@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2025 at 10:49 PM
+-- Generation Time: May 23, 2025 at 10:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -91,6 +91,7 @@ CREATE TABLE `saca` (
 CREATE TABLE `usuario` (
   `Codigo` int(11) NOT NULL,
   `Nombre` varchar(100) NOT NULL,
+  `Password` varchar(225) NOT NULL,
   `Telefono` varchar(20) DEFAULT NULL,
   `Direccion` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
