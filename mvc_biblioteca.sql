@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2025 at 10:22 PM
+-- Generation Time: May 23, 2025 at 10:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -91,7 +91,6 @@ CREATE TABLE `saca` (
 CREATE TABLE `usuario` (
   `Codigo` int(11) NOT NULL,
   `Nombre` varchar(100) NOT NULL,
-  `Password` varchar(225) NOT NULL,
   `Telefono` varchar(20) DEFAULT NULL,
   `Direccion` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -139,6 +138,34 @@ ALTER TABLE `saca`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`Codigo`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `autor`
+--
+ALTER TABLE `autor`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ejemplar`
+--
+ALTER TABLE `ejemplar`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `libro`
+--
+ALTER TABLE `libro`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
